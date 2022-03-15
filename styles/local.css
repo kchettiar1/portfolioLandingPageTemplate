@@ -1,0 +1,7 @@
+/* Body */
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Open Sans', sans-serif;
+  color: #6e6e73;
+}
