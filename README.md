@@ -1,6 +1,11 @@
-# Landing Page Template Example
+# Portfolio Landing Page Template Example
 
-This template contains a blank webpage template with:
+This template contains a portfolio landing website template with:
 
 - Navbar header (mobile repsonsive with open/close toggle)
+- Home page
+  - Main content
+    - Hero Section
+- About page
+- Contact page
 - Footer

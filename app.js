@@ -8,3 +8,5 @@ function menuToggle() {
 }
 
 menuBtn.addEventListener('click', menuToggle);
+
+

@@ -4,8 +4,8 @@
   margin: 0 auto;
   width: 100vw;
   height: calc(100vh - 9.3rem);
-  background-color: #0d3139;
-  color: #f5f5f7;
+  background-color: var(--homeBkgdCl);
+  color: var(--homeCl);
   text-align: center;
 }
 
@@ -16,7 +16,8 @@
   height: auto;
   width: 200px;
   border-radius: 50%;
-  border: 2px solid #b6ff9b
+  border: 2px solid var(--homeHglCl);
+  background-color: var(--white);
 }
 
 .main h1 {
@@ -29,25 +30,25 @@
 }
 
 .hero-headline strong {
-  color: #b6ff9b;
+  color: var(--homeHglCl);
   font-weight: 700;
 }
 
 .about {
-  background-color: #12213a;
-  color: #fff;
+  background-color: var(--aboutBkgdCl);
+  color: var(--white);
 }
 
 .about strong {
-  color: #ffa8ab;
+  color: var(--aboutHglCl);
 }
 .contact {
-  background-color: #2e2e3a;
-  color: #fff;
+  background-color: var(--contactBkgdCl);
+  color: var(--white);
 }
 
 .contact strong {
-  color: #72e4ce;
+  color: var(--contactHglCl);
 }
 
 @media (max-width: 425px) {
