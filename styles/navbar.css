@@ -68,7 +68,12 @@
   .nav-items {
     width: 100vw;
     background: var(navBkgdCl);
-    animation: navExpand 1250ms;
+   height: 0;
+  }
+  .nav-items.expand {
+    animation: navExpand 1500ms;
+    animation-fill-mode: forwards;
+    transition: cubic-bezier(0.17, 0.67, 0.83, 0.67);
   }
 
   @keyframes navExpand {
@@ -81,6 +86,25 @@
       transform: translate(0, 0);
       opacity: 1;
       height: auto;
+    }
+  }
+
+  .nav-items.collapse {
+    animation: navCollapse 1500ms;
+    transition: cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  }
+
+  @keyframes navCollapse {
+    from {
+      transform: translate(0, 0);
+      opacity: 1;
+  
+    }
+
+    to {
+      transform: translate(0, -40px);
+      opacity: 0;
+      height: 0;
     }
   }
 
