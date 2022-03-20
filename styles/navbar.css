@@ -49,13 +49,49 @@
   text-decoration: none;
 }
 
-.menu-toggle {
-  align-self: center;
-  font-size: 2rem;
-  padding: 1rem;
-  position: absolute;
-  right: 20px;
+.menu-btn  {
   cursor: pointer;
+  position: absolute;
+  top: 0px;
+  right: 15px;
+  width: 50px;
+  height: 44px;
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: all 1s ease-in-out;
+}
+
+.menuIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2px;
+  width: 24px;
+  background: #000;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
+  margin-bottom: 5px;
+}
+
+/* Menu Button Animation */
+.menu-btn.open .line2 {
+  transform: translateX(-40px);
+  background: transparent;
+  box-shadow: none;
+}
+
+.menu-btn.open .line1 {
+  position: absolute;
+  transform: rotate(45deg) rotate(360deg);
+}
+
+.menu-btn.open .line3 {
+  position: absolute;
+  transform: rotate(-45deg) rotate(360deg);
 }
 
 @media (max-width: 768px) {
@@ -68,43 +104,40 @@
   .nav-items {
     width: 100vw;
     background: var(navBkgdCl);
-   height: 0;
+    height: 0;
   }
   .nav-items.expand {
-    animation: navExpand 1500ms;
+    animation: navExpand 1250ms;
     animation-fill-mode: forwards;
     transition: cubic-bezier(0.17, 0.67, 0.83, 0.67);
   }
 
   @keyframes navExpand {
-    from {
-      transform: translate(0, -40px);
-      opacity: 0;
+    0% {
+      height: 0;
+      display: initial;
     }
 
-    to {
-      transform: translate(0, 0);
-      opacity: 1;
-      height: auto;
+    100% {
+      height: 22rem;
+      display: none;
     }
   }
 
   .nav-items.collapse {
-    animation: navCollapse 1500ms;
+    animation: navCollapse 1250ms;
     transition: cubic-bezier(0.17, 0.67, 0.83, 0.67);
   }
 
   @keyframes navCollapse {
-    from {
-      transform: translate(0, 0);
-      opacity: 1;
-  
+    0% {
+      display: initial;
+      height: 22rem;
     }
 
-    to {
-      transform: translate(0, -40px);
-      opacity: 0;
+    100% {
       height: 0;
+      display: none;
     }
   }
 
@@ -134,20 +167,5 @@
   }
   .menu-toggle {
     display: none;
-  }
-}
-
-.fa-times {
-  animation: easeNavToggle 1s;
-  transition: var(--transition);
-}
-
-@keyframes easeNavToggle {
-  from {
-    transform: translate(0, -5px);
-  }
-
-  to {
-    transform: translate(0, 0);
   }
 }
