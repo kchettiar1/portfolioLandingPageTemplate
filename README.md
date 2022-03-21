@@ -7,5 +7,6 @@ This template contains a portfolio landing website template with:
   - Main content
     - Hero Section
 - About page
+- Projects page
 - Contact page
 - Footer

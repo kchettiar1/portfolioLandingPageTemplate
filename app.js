@@ -2,7 +2,6 @@
 const menuBtn = document.querySelector('.menu-btn')
 let menuOpen = false;
 
-
 menuBtn.addEventListener('click', () => {
   if (!menuOpen) {
     menuBtn.classList.add('open');
@@ -12,13 +11,10 @@ menuBtn.addEventListener('click', () => {
     menuOpen = false;
 
   }
-  console.log('menuBtn',menuBtn);
-  console.log('menuOpen',menuOpen);
 })
 
 // Nav Menu Animation
 navItems = document.querySelector('.nav-items');
-console.log(navItems);
 let navOpen = false;
 
 menuBtn.addEventListener('click', () => {
