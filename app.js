@@ -18,9 +18,10 @@ menuBtn.addEventListener('click', () => {
 
 // Nav Menu Animation
 navItems = document.querySelector('.nav-items');
+console.log(navItems);
 let navOpen = false;
 
-addEventListener('click', () => {
+menuBtn.addEventListener('click', () => {
   if (!navOpen) {
     navItems.classList.remove('collapse');
     navItems.classList.add('expand');
